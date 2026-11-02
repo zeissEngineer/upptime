@@ -4,7 +4,6 @@ sites:
     url: "https://chat.mystden.dev/"
     expectedStatusCodes:
       - 200
-    expected: "connect"
   - name: Liv API
     url: "https://chat.mystden.dev/api/gateway/bot"
     expectedStatusCodes:
