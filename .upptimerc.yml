@@ -11,6 +11,7 @@ sites:
       - 401
   - name: Liv Media Proxy
     url: "https://chat.mystden.dev/media/attachments/1566017579808456704/1566073731023896583/ENERO.png"
+  - name: Codeberg
     url: "https://codeberg.org/"
 
 assignees:
