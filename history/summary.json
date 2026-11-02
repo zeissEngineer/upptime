@@ -54,24 +54,6 @@
     "dailyMinutesDown": {}
   },
   {
-    "name": "Watchdog dominio antiguo",
-    "url": "https://chat.privacidadlibre.org/_health",
-    "icon": "https://icons.duckduckgo.com/ip3/chat.privacidadlibre.org.ico",
-    "slug": "watchdog-dominio-antiguo",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 603,
-    "timeDay": 603,
-    "timeWeek": 603,
-    "timeMonth": 603,
-    "timeYear": 603,
-    "dailyMinutesDown": {}
-  },
-  {
     "name": "Codeberg",
     "url": "https://codeberg.org/",
     "icon": "https://icons.duckduckgo.com/ip3/codeberg.org.ico",
@@ -82,11 +64,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 606,
-    "timeDay": 606,
-    "timeWeek": 606,
-    "timeMonth": 606,
-    "timeYear": 606,
+    "time": 650,
+    "timeDay": 650,
+    "timeWeek": 650,
+    "timeMonth": 650,
+    "timeYear": 650,
     "dailyMinutesDown": {}
   }
 ]
