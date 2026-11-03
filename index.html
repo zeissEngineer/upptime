@@ -41,7 +41,7 @@ footer a:hover{text-decoration:underline}
 <body>
 <header><h1>📡 <span>Liv</span> — Estado del servidor</h1><div id="badge" class="badge ok">Cargando…</div></header>
 <div id="grid" class="grid"><div class="loading">Cargando datos…</div></div>
-<footer>Powered by <a href="https://github.com/zeissEngineer/upptime" target="_blank">Upptime</a> · <a href="https://chat.mystden.dev" target="_blank">chat.mystden.dev</a> · auto-refresh cada 5 min</footer>
+<footer>Powered by <a href="https://github.com/zeissEngineer/upptime" target="_blank">Upptime</a> · <a href="https://chat.mystden.dev" target="_blank">chat.mystden.dev</a> · auto-refresh cada 5 min · <span id="last-check"></span></footer>
 <script>
 const DATA_URL="https://raw.githubusercontent.com/zeissEngineer/upptime/HEAD/history/summary.json";
 const REFRESH=5*60*1000;
@@ -57,6 +57,7 @@ async function fetch_data(){
 
 function render(data){
     const grid=document.getElementById("grid");
+    if(!grid) return;
     grid.innerHTML="";
     let all_up=true;
     data.forEach(s=>{
@@ -88,14 +89,17 @@ function render(data){
         grid.appendChild(card);
     });
     const badge=document.getElementById("badge");
-    if(all_up){
-        badge.className="badge ok";
-        badge.textContent="🟢 Todos los sistemas operativos";
-    }else{
-        badge.className="badge err";
-        badge.textContent="🔴 Algunos servicios con problemas";
+    if(badge){
+        if(all_up){
+            badge.className="badge ok";
+            badge.textContent="🟢 Todos los sistemas operativos";
+        }else{
+            badge.className="badge err";
+            badge.textContent="🔴 Algunos servicios con problemas";
+        }
     }
-    document.getElementById("last-check").textContent=new Date().toLocaleTimeString("es-ES");
+    const lc=document.getElementById("last-check");
+    if(lc) lc.textContent=new Date().toLocaleTimeString("es-ES");
 }
 
 async function refresh(){
