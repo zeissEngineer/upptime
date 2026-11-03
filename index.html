@@ -103,7 +103,7 @@ async function refresh(){
         const data=await fetch_data();
         render(data);
     }catch(e){
-        document.getElementById("grid").innerHTML='<div class="loading">❌ Error cargando datos</div>';
+        document.getElementById("grid").innerHTML='<div class="loading">❌ '+e.message+'<br><small>'+e.stack?.split("\n")[1]+'</small></div>';
     }
 }
 
