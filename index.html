@@ -43,7 +43,7 @@ footer a:hover{text-decoration:underline}
 <div id="grid" class="grid"><div class="loading">Cargando datos…</div></div>
 <footer>Powered by <a href="https://github.com/zeissEngineer/upptime" target="_blank">Upptime</a> · <a href="https://chat.mystden.dev" target="_blank">chat.mystden.dev</a> · auto-refresh cada 5 min · <span id="last-check"></span></footer>
 <script>
-const DATA_URL="https://raw.githubusercontent.com/zeissEngineer/upptime/HEAD/history/summary.json";
+const DATA_URL="https://api.github.com/repos/zeissEngineer/upptime/contents/history/summary.json";
 const REFRESH=5*60*1000;
 
 function fmt_ms(ms){return ms>=1000?(ms/1000).toFixed(1)+"s":ms+"ms"}
@@ -51,8 +51,9 @@ function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
 
 async function fetch_data(){
     const res=await fetch(DATA_URL+"?t="+Date.now());
-    const data=await res.json();
-    return data;
+    const raw=await res.json();
+    const bytes=Uint8Array.from(atob(raw.content),c=>c.charCodeAt(0));
+    return JSON.parse(new TextDecoder().decode(bytes));
 }
 
 function render(data){
