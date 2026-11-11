@@ -58,19 +58,19 @@
     "url": "https://codeberg.org/",
     "icon": "https://icons.duckduckgo.com/ip3/codeberg.org.ico",
     "slug": "codeberg",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 686,
-    "timeDay": 631,
-    "timeWeek": 743,
-    "timeMonth": 686,
-    "timeYear": 686,
+    "status": "up",
+    "uptime": "96.56%",
+    "uptimeDay": "69.39%",
+    "uptimeWeek": "95.63%",
+    "uptimeMonth": "96.56%",
+    "uptimeYear": "96.56%",
+    "time": 673,
+    "timeDay": 577,
+    "timeWeek": 715,
+    "timeMonth": 673,
+    "timeYear": 673,
     "dailyMinutesDown": {
-      "2026-11-11": 0
+      "2026-11-11": 441
     }
   }
 ]
