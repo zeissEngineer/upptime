@@ -1,7 +1,7 @@
 url: https://chat.mystden.dev/api/gateway/bot
-status: up
-code: 401
-responseTime: 223
-lastUpdated: 2026-11-13T03:01:48.462Z
+status: down
+code: 530
+responseTime: 41
+lastUpdated: 2026-11-13T22:49:58.048Z
 startTime: 2026-11-02T11:10:14.620Z
 generator: Upptime <https://github.com/upptime/upptime>
